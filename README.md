@@ -1,4 +1,4 @@
-# Calculator 2000
+# Sign-up form
 
 The project is to create a fake signup page using HTML, CSS and Vanilla JS.
 
