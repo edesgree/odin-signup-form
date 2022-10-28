@@ -16,9 +16,9 @@ body {
 }
 
 body {
-  background: #5A3F37; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #2C7744, #5A3F37); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #5a3f37; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #2c7744, #5a3f37); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #2c7744, #5a3f37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -29,7 +29,6 @@ input {
   border-radius: 0.375em;
   line-height: 1.5;
   max-width: 100%;
-  padding: 2px 4px;
   padding-bottom: calc(0.5em - 1px);
   padding-left: calc(0.75em - 1px);
   padding-right: calc(0.75em - 1px);
@@ -45,21 +44,25 @@ input:invalid, input.error {
   border-color: red;
 }
 
-button, input[type=submit] {
+button,
+input[type=submit] {
   background-color: #31be5e;
-  border-color: #dbdbdb;
-  border-width: 1px;
+  border: none;
+  border-radius: 0.375em;
   color: #323031;
   cursor: pointer;
+  font-weight: bold;
   justify-content: center;
-  padding-bottom: calc(0.5em - 1px);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: calc(0.5em - 1px);
+  padding-bottom: calc(1em - 1px);
+  padding-left: calc(1.25em - 1px);
+  padding-right: calc(1.25em - 1px);
+  padding-top: calc(1em - 1px);
   text-align: center;
   white-space: nowrap;
 }
-button:hover, button:active, input[type=submit]:hover, input[type=submit]:active {
+button:hover, button:active,
+input[type=submit]:hover,
+input[type=submit]:active {
   background-color: #79dc98;
 }
 
@@ -103,4 +106,15 @@ main .form .form-area .inputs label {
 }
 main .form .form-area .submit-area {
   padding: 20px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 400px) {
+  main .form .form-area .inputs {
+    width: 100%;
+  }
 }
