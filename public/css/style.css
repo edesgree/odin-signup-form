@@ -25,7 +25,7 @@ body {
 }
 
 input {
-  border: none;
+  border: solid 1px transparent;
   border-radius: 0.375em;
   line-height: 1.5;
   max-width: 100%;
@@ -35,6 +35,14 @@ input {
   padding-right: calc(0.75em - 1px);
   padding-top: calc(0.5em - 1px);
   width: 100%;
+}
+input:focus {
+  border-color: #31be5e;
+  box-shadow: 0 0 4px #31be5e;
+  outline: none;
+}
+input:invalid, input.error {
+  border-color: red;
 }
 
 button, input[type=submit] {
@@ -79,6 +87,11 @@ main .form .form-area form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  /* Dim and disable the button while the form is invalid */
+}
+main .form .form-area form:invalid button {
+  opacity: 0.3;
+  pointer-events: none;
 }
 main .form .form-area .inputs {
   margin-bottom: 20px;
