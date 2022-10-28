@@ -1,0 +1,93 @@
+/*PROJECT CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  align-items: center;
+  background-color: #323031;
+  color: #323031;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #5A3F37; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #2C7744, #5A3F37); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: none;
+  border-radius: 0.375em;
+  line-height: 1.5;
+  max-width: 100%;
+  padding: 2px 4px;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  width: 100%;
+}
+
+button, input[type=submit] {
+  background-color: #31be5e;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #323031;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+button:hover, button:active, input[type=submit]:hover, input[type=submit]:active {
+  background-color: #79dc98;
+}
+
+main {
+  background-color: #afd5c5;
+  display: flex;
+}
+main header {
+  background: url("../images//bg.jpg") no-repeat;
+  background-size: cover;
+  color: #ffc857;
+  flex: 1;
+}
+main .form {
+  flex: 3;
+}
+main .form .hero {
+  padding: 20px;
+}
+main .form .form-area {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+main .form .form-area form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .form .form-area .inputs {
+  margin-bottom: 20px;
+  width: calc(50% - 10px);
+}
+main .form .form-area .inputs label {
+  display: block;
+  margin-bottom: 5px;
+}
+main .form .form-area .submit-area {
+  padding: 20px 0;
+}

@@ -1,19 +1,20 @@
 /*PROJECT CSS*/
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 //VARS
 $containerWidth: min(100% - 2rem, 60rem);
 $assetsPath: "../images/";
 $dark: #323031;
 $bright: #ffc857;
-$bright2: #ca2f2f;
+$bright2: #31be5e;
 $main: #084c61;
 $main2: #177e89;
-$grid: #ccc;
-$font: "Kalam", cursive;
+$grid: #afd5c5;
+$font: "Montserrat", sans-serif;
+$padDef: 20px;
 body {
     align-items: center;
     background-color: $dark;
-    color: $bright;
+    color: $dark;
     display: flex;
     flex-direction: column;
     font-family: $font;
@@ -25,14 +26,88 @@ body {
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 700px) {
+body {
+    background: #5A3F37;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
    
+}
+// form styles
+input {
+    border: none;
+    border-radius: 0.375em;
+    //box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+    line-height: 1.5;
+    max-width: 100%;
+    padding: 2px 4px;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: calc(0.75em - 1px);
+    padding-right: calc(0.75em - 1px);
+    padding-top: calc(0.5em - 1px);
+    width: 100%;
+}
+button ,input[type=submit]{
+    background-color: $bright2;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: $dark;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    &:hover,&:active{
+        background-color: lighten($bright2,20);
+    }
+}
+main {
+    background-color: $grid;
+    display: flex;
+    header {
+        background: url("#{$assetsPath}/bg.jpg") no-repeat;
+        background-size: cover;
+        color: $bright;
+        flex: 1;
+    }
+    .form {
+       flex: 3;
+
+        .hero {
+            padding: $padDef;
+        }
+        .form-area {
+            background: rgba(255, 255, 255, 0.3);
+            padding: $padDef;
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .inputs {
+                margin-bottom: 20px;
+                width: calc(50% - 10px);
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+            .submit-area {
+                padding: $padDef 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
 }
 @media only screen and (max-width: 500px) {
-    
 }
 @media only screen and (max-width: 400px) {
-   
 }
 @media only screen and (min-width: 960px) {
 }
